@@ -76,7 +76,7 @@ section img:hover {
 
 .from-contact form {
     display: grid;
-    gap: 20px;
+    gap: 15px;  
 }
 
 .form-group {
@@ -85,18 +85,18 @@ section img:hover {
 }
 
 .form-group label {
-    font-size: 1rem;
+    font-size: 1.5rem;  
     margin-bottom: 5px;
     color: #34495e;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 8px;  
+    font-size: 0.9rem;  
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 100%;  
     box-sizing: border-box;
 }
 
@@ -107,7 +107,7 @@ section img:hover {
 }
 
 .form-group small {
-    font-size: 0.9rem;
+    font-size: 1rem;  
     color: #7f8c8d;
     margin-top: 5px;
 }
