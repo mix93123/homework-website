@@ -1,4 +1,4 @@
-body { 
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,21 +20,14 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: relative; 
-    z-index: 1; 
-    width: 100%;
+    font-size: 35px;
     opacity: 0;
     animation: fadeInHeader 1s ease-out forwards;
-    font-size: 35px;
 }
 
 @keyframes fadeInHeader {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 header nav ul {
@@ -44,10 +37,6 @@ header nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-header nav ul li {
-    display: inline;
 }
 
 header nav ul li a {
@@ -68,7 +57,8 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center; 
+    text-align: center;
+    width: 90%;
 }
 
 section img {
@@ -84,32 +74,6 @@ section img:hover {
     transform: scale(1.1); 
 }
 
-article {
-    padding: 10px 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-}
-
-article h1 {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    margin: 0;
-    text-align: center;
-}
-
-footer {
-    background-color: #2c3e50; 
-    color: white; 
-    text-align: center; 
-    padding: 20px 0; 
-    font-size: 0.9rem; 
-    margin-top: 20px; 
-    border-top: 2px solid #34495e; 
-    opacity: 0;
-    animation: fadeInFooter 1s ease-out forwards;
-}
 .from-contact form {
     display: grid;
     gap: 20px;
@@ -147,6 +111,7 @@ footer {
     color: #7f8c8d;
     margin-top: 5px;
 }
+
 button {
     background-color: #3498db;
     color: white;
@@ -162,24 +127,34 @@ button:hover {
     background-color: #2980b9;
 }
 
-main {
-    width: 90%;
-    padding: 15px;
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-top: 2px solid #34495e;
+    opacity: 0;
+    animation: fadeInFooter 1s ease-out forwards;
 }
 
-
 @keyframes fadeInFooter {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
-    .card-container {
+    header {
+        font-size: 1.2rem;
+    }
+    
+    header nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
     }
 }
