@@ -20,9 +20,9 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative; 
+    z-index: 1; 
+    width: 100%;
 }
 header nav ul {
     list-style: none;
