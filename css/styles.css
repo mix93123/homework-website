@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 35px;
+    opacity: 0;
+    animation: fadeInHeader 1s ease-out forwards;
+}
+
+@keyframes fadeInHeader {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #34495e;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+section img:hover {
+    transform: scale(1.1); 
+}
+
+.from-contact form {
+    display: grid;
+    gap: 15px;  
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.5rem;  
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;  
+    font-size: 0.9rem;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;  
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-group small {
+    font-size: 1rem;  
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-top: 2px solid #34495e;
+    opacity: 0;
+    animation: fadeInFooter 1s ease-out forwards;
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.2rem;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
