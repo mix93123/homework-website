@@ -30,7 +30,14 @@ header {
     to { opacity: 1; }
 }
 
-header nav ul {
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nav List */
+.nav-list {
     list-style: none;
     margin: 10px 0 0;
     padding: 0;
@@ -39,7 +46,7 @@ header nav ul {
     gap: 20px;
 }
 
-header nav ul li a {
+.nav-list li a {
     color: white;
     font-weight: bold;
     font-size: 25px;
@@ -48,11 +55,56 @@ header nav ul li a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-header nav ul li a:hover {
+.nav-list li a:hover {
     background-color: #34495e;
     transform: scale(1.1);
 }
 
+/* Hamburger Menu (Mobile) */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+}
+
+/* For Mobile: Hide the menu by default and display the hamburger */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-list.active {
+        display: block;
+    }
+
+    .nav-list li {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-list li a {
+        width: 100%;
+    }
+}
+
+/* Main content */
 main {
     padding: 20px;
     max-width: 800px;
@@ -61,6 +113,7 @@ main {
     width: 90%;
 }
 
+/* Section images */
 section img {
     max-width: 100%;
     height: auto;
@@ -74,6 +127,7 @@ section img:hover {
     transform: scale(1.1); 
 }
 
+/* Contact form */
 .from-contact form {
     display: grid;
     gap: 15px;  
@@ -112,6 +166,7 @@ section img:hover {
     margin-top: 5px;
 }
 
+/* Button styles */
 button {
     background-color: #3498db;
     color: white;
@@ -142,19 +197,4 @@ footer {
 @keyframes fadeInFooter {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-@media (max-width: 768px) {
-    header {
-        font-size: 1.2rem;
-    }
-    
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        padding: 15px;
-    }
 }
