@@ -61,10 +61,9 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: #34495e;
-    transform: scale(1.1); /* ขยายปุ่มเมื่อ hover */
+    transform: scale(1.1);
 }
 
-/* --- Main Section with Zoom Effect on Images --- */
 main {
     padding: 20px;
     max-width: 800px;
@@ -93,15 +92,6 @@ article {
     display: inline-block;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
 article h1 {
     font-size: 1.2rem;
     color: #2c3e50;
@@ -120,6 +110,63 @@ footer {
     opacity: 0;
     animation: fadeInFooter 1s ease-out forwards;
 }
+.from-contact form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-group small {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+main {
+    width: 90%;
+    padding: 15px;
+}
+
 
 @keyframes fadeInFooter {
     0% {
