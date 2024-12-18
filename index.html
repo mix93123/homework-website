@@ -8,9 +8,12 @@
 </head>
 <body>
     <header>
-        สมุทรปราการ 🗺️
-        <nav role="navigation" aria-label="เมนูหลัก">
-            <ul>
+        <div>สมุทรปราการ 🗺️</div>
+        <!-- Checkbox สำหรับเปิด/ปิดเมนู -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- เมนู -->
+        <ul class="nav-list">
                 <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
                 <li><a href="content.html" aria-current="content">สถานที่ท่องเที่ยว</a></li>
                 <li><a href="contact.html" aria-current="contact">ช่องทางติดต่อ</a></li>
